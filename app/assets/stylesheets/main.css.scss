@@ -1,0 +1,302 @@
+/* EM reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* universal */
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	background: #EAEAEA url('wallpaper.png') no-repeat top;
+}
+
+p {
+	color: #4C4C4C;
+	font: 16px/24px 'Open Sans', sans-serif;
+}
+
+.sketch {
+	border: 1px solid red;
+}
+
+#container {
+	max-width: 1200px;
+	min-height: 100%;
+	margin: 25px auto 0;
+	padding: 15px 25px 0 25px; 
+	background: #FFF;
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+/* header */
+
+header {
+	height: 160px;
+	padding: 15px 0 0 0;
+	margin-bottom: 15px;
+}
+
+#logo {
+	height: 125px;
+	width: 115px;
+	border: 1px dashed #4C4C4C;
+	text-align: center;
+	padding-top: 15px;
+	float: left;
+	margin-right: 30px;
+}
+
+#logo-text {
+	color: #4C4C4C;
+	text-transform: uppercase;
+	font: 18px/28px Arial, sans-serif;
+}
+
+.navigation .nav-box {
+	height: 33px;
+	width: 65px;
+	display: inline-block;
+	border: 2px solid white;
+	text-align: center;
+	padding-top: 15px;
+}
+
+.navigation ul {
+	font: 16px/24px 'Open Sans', Arial, sans-serif;
+}
+
+.navigation li {
+	display: inline-block;
+}
+
+.navigation a {
+	text-decoration: none;
+	color: #919191;
+	text-transform: uppercase;
+}
+
+.nav-box:hover {
+	border-top: 2px solid #CCCCCC;
+	transition: 0.8s;
+}
+
+#header-social {
+	float: right;
+	margin: 15px 30px;
+}
+
+/* home page */
+
+#hero-banner {
+	width: 100%;
+	height: 550px;
+	background: url('losangeles2.jpg');
+	background-size: cover;
+	margin-bottom: 30px;
+	position: static;
+}
+
+#hero-banner-container {
+	height: 130px;
+	width: 440px;
+	top: 400px;
+	float: right;
+	padding: 15px;
+	position: relative;
+	background: rgb(0, 0, 0); /* Fallback for older browsers without RGBA-support */
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-banner-header {
+	color: #FFF;
+	font: 36px Verdana, Geneva, sans-serif;
+	display: block;
+}
+
+.hero-banner-text {
+	color: #FFF;
+	font: 18px/24px Helvetica, Arial, sans-serif;
+	margin-top: 10px;
+}
+
+#home-banner {
+	margin-bottom: 40px;
+}
+
+#previous-banner, #next-banner {
+	height: 250px;
+	width: 560px;
+	display: inline-block;
+}
+
+#previous-banner {
+	margin-right: 25px;
+	background: url('newyork4.jpg');
+	background-size: cover;
+}
+
+#next-banner {
+	background: url('tokyo.jpg');
+	background-size: cover;
+}
+
+.center {
+	text-align: center;
+}
+
+.previous, .next {
+	display: block;
+	font: italic 24px Georgia, serif;
+	margin: 15px 0 60px 0;
+	padding-left: 15px;
+	color: #000;
+	background: rgb(200, 200, 200); /* Fallback for older browsers without RGBA-support */
+  background: rgba(200, 200, 200, 0.5);
+}
+
+.next-city, .previous-city {
+	color: #FFF;
+	font: 44px Arial, sans-serif;
+}
+
+.page-line {
+	width: 100%;
+	height: 2px;
+	margin-top: 50px;
+	background: -webkit-linear-gradient(to right, #FFF, #D2D2D2, #FFF); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(to right, #FFF, #D2D2D2, #FFF); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(to right, #FFF, #D2D2D2, #FFF); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #FFF, 20%, #D2D2D2, 80%, #FFF); /* Standard syntax */
+}
+
+/* footer */
+footer {
+	height: 180px;
+	width: 100%;
+	background: #2A2A2A;
+}
+
+#footer-col-1 {
+	padding-top: 40px;
+}
+
+.social {
+	padding-left: 15px;
+}
+
+.social img {
+	margin-right: 10px;
+	opacity: 0.5;
+}
+
+.social img:hover {
+	opacity: 0.8;
+	transition: 0.5s;
+}
+
+#footer-col-1 img {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#copyright {
+	color: #4C4C4C;
+	font: 12px/18px 'Open Sans', sans-serif; 
+}
+
+#footer-col-2 {
+	float: right;
+	width: 220px;
+	margin: 15px 30px 0 0;
+}
+
+#footer-col-2 a {
+	text-decoration: none;
+}
+
+#about-header {
+	color: #FFF;
+	display: block;
+	font: 16px/26px 'Open Sans', Arial, sans-serif;
+}
+
+#about-text {
+	color: #4C4C4C;
+	font: 14px/24px Arial, sans-serif;
+}
+
+/* about us page */
+
+#about-page-content {
+	margin: 20px 0 65px 0;
+}
+
+#about-us-text {
+	width: 30%;
+	margin: 2% 7%;
+
+}
+
+#about-us-text h1 {
+	font: 26px/48px 'Roboto', Arial, sans-serif;
+}
+
+#about-us-text p {
+	font: 18px/36px 'Open Sans', Arial, sans-serif;
+}
