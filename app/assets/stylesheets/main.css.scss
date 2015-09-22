@@ -141,6 +141,30 @@ header {
 	margin: 15px 30px;
 }
 
+#flash {
+	height: 50px;
+	width: 200px;
+	margin: 10px 0 0 155px;
+}
+
+.notice {
+	font: 14px/28px "Open Sans", Arial, sans-serif;
+	border: 2px solid #93AF3E;
+	border-radius: 3px;
+	background: #B8DB4D;
+	padding-left: 15px;
+	color: #E3FF91;
+}
+
+.alert {
+	font: 14px/28px "Open Sans", Arial, sans-serif;
+	border: 2px solid #990000;
+	border-radius: 3px;
+	background: #FFCCCC;
+	padding-left: 15px;
+	color: #990000;
+}
+
 /* home page */
 
 #hero-banner {
@@ -215,16 +239,6 @@ header {
 	font: 44px Arial, sans-serif;
 }
 
-.page-line {
-	width: 100%;
-	height: 2px;
-	margin-top: 50px;
-	background: -webkit-linear-gradient(to right, #FFF, #D2D2D2, #FFF); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(to right, #FFF, #D2D2D2, #FFF); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(to right, #FFF, #D2D2D2, #FFF); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, #FFF, 20%, #D2D2D2, 80%, #FFF); /* Standard syntax */
-}
-
 /* footer */
 footer {
 	height: 180px;
@@ -284,7 +298,7 @@ footer {
 /* about us page */
 
 #about-page-content {
-	margin: 20px 0 65px 0;
+	margin: 20px 0 70px 0;
 }
 
 #about-us-text {
@@ -299,4 +313,65 @@ footer {
 
 #about-us-text p {
 	font: 18px/36px 'Open Sans', Arial, sans-serif;
+}
+
+/* login page */
+
+#login {
+	padding: 20px;
+	width: 400px;
+	margin-bottom: 350px;
+	display: inline-block;
+	font: 18px/24px 'Roboto', Arial, sans-serif;
+}
+
+#login h2 {
+	font:24px/28px 'Roboto', Arial, sans-serif;
+	color: #919191;
+	display: inline-block;
+	padding: 0 10px 0 0;
+	margin-bottom: 5px;
+}
+
+#underline {
+	height: 3px;
+	width: 100%;
+	background: #D7D7D7;
+	margin-bottom: 25px;
+}
+
+.field {
+	margin-bottom: 10px;
+}
+
+label {
+	float: left;
+	text-align: right;
+	margin-right: 15px;
+	width: 100px;
+}
+
+.remember {
+	width: 100%;
+	margin-left: 115px;
+	font-size: 12px;
+}
+
+.remember label {
+	float: none;
+}
+
+#submit-button {
+	margin-top: -10px;
+	margin-left: 115px;
+	font-size: 12px;
+}
+
+#submit-button input[type=submit] {
+	border-radius: 2px;
+	border: 1px solid #66A3FF;
+	background: #85B5FF;
+	color: #FFF;
+	padding: 5px;
+	text-transform: uppercase;
 }

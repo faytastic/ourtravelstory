@@ -15,9 +15,17 @@
 						<li class="nav-box"><a id="city" href="#">Cities</a></li>
 						<li class="nav-box"><a href="#">Photos</a></li>
 						<li class="nav-box"><a href="#">Plan</a></li>
-						<li class="nav-box"><a href="#">Login</a></li>
+						<% if user_signed_in? %><li class="nav-box"><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+						<% else %>
+						<li class="nav-box"><%= link_to "Login", new_user_session_path %></li>
+						<% end %>
 					</ul>	
 	</nav>
+
+	<div id="flash">
+		<% if notice %><p class="notice"><%= notice %></p><% end %>
+		<% if alert %><p class="alert"><%= alert %></p><% end %>
+	</div>
 
 </header>
 
