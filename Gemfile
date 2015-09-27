@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 gem 'devise'
 gem 'will_paginate'
+gem 'carrierwave',				'0.10.0'
+gem 'mini_magick',				'3.8.0'
+gem 'acts-as-taggable-on', '~> 3.4'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

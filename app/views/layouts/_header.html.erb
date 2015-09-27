@@ -15,7 +15,9 @@
 						<li class="nav-box"><a id="city" href="#">Cities</a></li>
 						<li class="nav-box"><a href="#">Photos</a></li>
 						<li class="nav-box"><a href="#">Plan</a></li>
-						<% if user_signed_in? %><li class="nav-box"><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+						<% if user_signed_in? %>
+						<li class="nav-box"><%= link_to "Post", new_article_path %></li> 
+						<li class="nav-box"><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
 						<% else %>
 						<li class="nav-box"><%= link_to "Login", new_user_session_path %></li>
 						<% end %>

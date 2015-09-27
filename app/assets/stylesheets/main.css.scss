@@ -84,6 +84,10 @@ p {
 	float: left;
 }
 
+.clear {
+	clear: both;
+}
+
 /* header */
 
 header {
@@ -143,7 +147,7 @@ header {
 
 #flash {
 	height: 50px;
-	width: 200px;
+	width: 500px;
 	margin: 10px 0 0 155px;
 }
 
@@ -374,4 +378,80 @@ label {
 	color: #FFF;
 	padding: 5px;
 	text-transform: uppercase;
+}
+
+/* create new article page */
+
+#new-post {
+	padding: 20px;
+	width: 600px;
+	margin-bottom: 350px;
+	display: inline-block;
+	font: 18px/24px 'Roboto', Arial, sans-serif;
+}
+
+#new-post #submit-button {
+	margin-top: 10px;
+}
+
+#new-post #submit-button input[type=submit] {
+	margin-top: 10px;
+}
+
+#new-post h2 {
+	font:24px/28px 'Roboto', Arial, sans-serif;
+	color: #919191;
+	display: inline-block;
+	padding: 0 10px 0 0;
+	margin-bottom: 5px;
+}
+
+/* show single article */
+
+#article-container {
+	width: 100%;
+}
+
+#article-container .clear {
+	margin-bottom: 150px;
+}
+
+.article-picture {
+	float: left;
+	margin-right: 75px;
+	max-width: 70%;
+}
+
+.article-text #title h1 {
+	font: 24px/36px 'Roboto', Arial, sans-serif;
+	margin-bottom: 5px;
+}
+
+.article-text #address {
+	display: inline-block;
+	width: 300px;
+}
+
+.article-text #address p {
+	font: italic 14px 'Open Sans', Arial, sans-serif;
+	margin-bottom: 25px;
+}
+
+.article-text #content {
+	padding-right: 15px;
+	margin-bottom: 25px;
+}
+
+.article-text #content {
+	font: 16px Lucida, Georgia;
+}
+
+.article-text #taglist p{
+	font-size: 0.9em;
+}
+
+.article-text #taglist a {
+	color: #4C4C4C;
+	text-transform: uppercase;
+	font-size: 0.9em;
 }
