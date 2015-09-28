@@ -1,13 +1,15 @@
 
-<div id="article-container">
-	<section class="article-picture">
+<section id="single-article">
+
+	<div class="article-picture">
 		<% if @article.image? %>
-		<%= link_to image_tag(@article.image_url(:medium)), "#{@article.image_url}" %>
+		<%= link_to image_tag(@article.image_url(:medium)), "#{@article.image.url}" %>
 		<% else %>
 		<%= image_tag('no-image.jpg') %>
 		<% end %>
-	</section>
-	<aside class="article-text">
+	</div>
+	
+	<div class="article-text">
 		<span id="title"><h1><%= @article.title %></h1></span>
 		<div id="address"><p><%= @article.address %></p></div>
 		<div id="content"><p><%= @article.content %></p></div>
@@ -16,6 +18,7 @@
 			<p>Tags: <%= raw @article.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
 		</div>
 		<% end %>
-	</aside>
-	<div class="clear">
-</div> 
+	</div>
+
+	<div class="clear"></div>
+</section> 

@@ -1,0 +1,28 @@
+<section id="articles-index">
+	<div id="index-heading">
+		<h1>Photos</h1>
+		<div id="tags"><p>Select Category:
+			  <% tag_cloud Article.tag_counts, %w[s m l] do |tag, css_class| %>
+		    <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+		  	<% end %></p>
+		</div>
+	</div>
+
+	<div id="index-grid">
+		<% @articles.each do |article| %>
+		<div class="index-gridbox">
+			<div class="index-grid-picture">
+				<% if article.image? %>
+				<%= link_to image_tag(article.image_url(:thumb)), article %>
+				<% else %>
+				<%= link_to image_tag('no-image-thumb.jpg'), article %>
+				<% end %>
+			</div>
+			<div class="index-grid-title">
+				<%= truncate(article.title, :length => 23) %>
+			</div>
+		</div>
+		<% end %>
+	</div>
+
+</section>

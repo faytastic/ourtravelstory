@@ -1,7 +1,12 @@
 class ArticlesController < ApplicationController
-	before_action :authenticate_user!
+	before_action :authenticate_user!, only: [:create, :destroy]
 
 	def index
+		if params[:tag]
+			@articles= Article.tagged_with(params[:tag])
+		else
+			@articles = Article.all
+		end
 	end
 
 	def create
