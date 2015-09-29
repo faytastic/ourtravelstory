@@ -1,6 +1,7 @@
 <section id="articles-index">
 	<div id="index-heading">
 		<h1>Photos</h1>
+		<div id="underline"></div>
 		<div id="tags"><p>Select Category:
 			  <% tag_cloud Article.tag_counts, %w[s m l] do |tag, css_class| %>
 		    <%= link_to tag.name, tag_path(tag.name), class: css_class %>

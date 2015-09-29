@@ -7,6 +7,20 @@
 		<% else %>
 		<%= image_tag('no-image.jpg') %>
 		<% end %>
+
+		<% if @attachments.size>0 %>
+	<div id="gallery">
+			<p><%= image_tag('camera.png') %>More Photos</p>
+			<% @attachments.each do |attachment| %>
+			<div class="gallery-thumb"><%= link_to image_tag(attachment.picture_url(:gallery)), "#{attachment.picture_url}" %>
+				<% if user_signed_in? %>
+					<p><%= link_to "Remove", [attachment.article, attachment], method: :delete %></p>
+				<% end %>
+			</div>
+			<% end %>
+	</div>
+	<% end %>
+
 	</div>
 	
 	<div class="article-text">
@@ -18,6 +32,11 @@
 			<p>Tags: <%= raw @article.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
 		</div>
 		<% end %>
+		<% if user_signed_in? %>
+			<div id="edit-link"><%= link_to 'Edit', edit_article_path(@article) %></div>
+			<div id="delete-link"><%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %></div>
+			<div id="add-pictures"><%= render 'attachments/add_pictures_form' %></div>
+			<% end %>
 	</div>
 
 	<div class="clear"></div>

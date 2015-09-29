@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-	before_action :authenticate_user!, only: [:create, :destroy]
+	before_action :authenticate_user!, only: [:create, :destroy, :update]
 
 	def index
 		if params[:tag]
@@ -25,16 +25,32 @@ class ArticlesController < ApplicationController
 	end
 
 	def edit
+		@article = Article.find(params[:id])
 	end
 
 	def show
 		@article = Article.find(params[:id])
+		@attachment = @article.attachments.build
+		@attachments = @article.attachments.all
 	end
 
 	def update
+		@article = Article.find(params[:id])
+
+		if @article.update(articles_params)
+			flash[:notice] = "Edit complete!"
+			redirect_to @article
+		else
+			flash[:alert] = "Hmmm... Something went wrong."
+			redirect_to :back
+		end
 	end
 
 	def destroy
+		@article = Article.find(params[:id])
+		@article.destroy
+		flash[:notice] = "Post Deleted!"
+		redirect_to root_url
 	end
 
 	private

@@ -1,0 +1,10 @@
+<%= form_for([@article, @article.attachments.build]) do |f| %>
+<div id="submit-button">
+	<p>Add Pictures</p>
+	<span class="picture">
+	<p><%= f.file_field :picture %></p>
+	<p><%= f. text_field :remote_picture_url, placeholder: "or image URL (non HTTPS)", size: "33x1" %></p>
+	</span>
+	<%= f.submit "Post" %>
+</div>
+<% end %> 

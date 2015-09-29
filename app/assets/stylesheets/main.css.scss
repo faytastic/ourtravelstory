@@ -380,9 +380,9 @@ label {
 	text-transform: uppercase;
 }
 
-/* create new article page */
+/* create or edit article page */
 
-#new-post {
+#new-post, #edit-post {
 	padding: 20px;
 	width: 600px;
 	margin-bottom: 350px;
@@ -390,15 +390,19 @@ label {
 	font: 18px/24px 'Roboto', Arial, sans-serif;
 }
 
-#new-post #submit-button {
+#new-post #submit-button, #edit-post #submit-button, .article-text #submit-button {
 	margin-top: 10px;
 }
 
-#new-post #submit-button input[type=submit] {
+.article-text #submit-button {
+	margin-left: 0px;
+}
+
+#new-post #submit-button input[type=submit], #edit-post #submit-button input[type=submit], .article-text #submit-button input[type=submit] {
 	margin-top: 10px;
 }
 
-#new-post h2 {
+#new-post h2, #edit-post h2 {
 	font:24px/28px 'Roboto', Arial, sans-serif;
 	color: #919191;
 	display: inline-block;
@@ -418,9 +422,13 @@ label {
 }
 
 .article-picture {
-	float: left;
-	margin-right: 75px;
-	max-width: 70%;
+	float:left;
+	width: 700px;
+}
+
+.article-text {
+	float:right;
+	width: 430px;
 }
 
 .article-text #title h1 {
@@ -457,6 +465,50 @@ label {
 	font-size: 0.9em;
 }
 
+.article-text #edit-link, .article-text #delete-link {
+	margin-top: 15px;
+	display: inline-block;
+}
+
+.article-text #edit-link a, .article-text #delete-link a {
+	font-family: 'Open Sans', Arial, sans-serif;
+	color: #FFF;
+	text-decoration: none;
+	background: #444;
+}
+
+#gallery {
+	margin-top: 15px;
+	background: #E6E6E6;
+	border: 1px solid #CFCFCF;
+	width: 570px;
+	padding: 10px 10px 0 10px;
+	border-radius: 8px;
+}
+
+#gallery img {
+	vertical-align: top;
+}
+
+#gallery .gallery-thumb {
+	width: 180px;
+	margin-bottom: 10px;
+	display: inline-block;
+	text-align: center;
+}
+
+#gallery .gallery-thumb p a {
+	text-decoration: none;
+	font: 11px 'Open Sans', Arial, sans-serif;
+	color: #919191;
+}
+
+#gallery p {
+	color: #4C4C4C;
+	font: 18px 'Roboto', Arial, sans-serif;
+	margin-bottom: 15px;
+}
+
 /* index page */
 
 #index-heading {
@@ -464,9 +516,11 @@ label {
 }
 
 #index-heading h1 {
-	color: #000;
-	font: 26px/48px 'Roboto', Arial, sans-serif;
-	margin: 0 0 5px;
+	font:24px/28px 'Roboto', Arial, sans-serif;
+	color: #919191;
+	display: inline-block;
+	padding: 0 10px 0 0;
+	margin-bottom: 5px;
 }
 
 .index-gridbox {
