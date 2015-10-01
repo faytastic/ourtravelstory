@@ -23,7 +23,7 @@ class AttachmentsController < ApplicationController
 	private
 
 	def attachment_params
-		params.require(:attachment).permit(:picture)
+		params.require(:attachment).permit(:picture, :remote_picture_url)
 	end
 
 end
