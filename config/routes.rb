@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root            'static_pages#home'
   get 'about' =>  'static_pages#about' 
   get 'plan' => 	'articles#plan'
+  get 'cities' =>	'static_pages#cities'
 
   resources :articles do
   	resources :attachments

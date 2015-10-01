@@ -12,7 +12,7 @@
 
 	<nav class="navigation">
 					<ul>
-						<li class="nav-box"><a id="city" href="#">Cities</a></li>
+						<li class="nav-box"><%= link_to "Cities", cities_path %></li>
 						<li class="nav-box"><%= link_to "Photos", articles_path %></li>
 						<li class="nav-box"><%= link_to "Plans", plan_path %></li>
 						<% if user_signed_in? %>

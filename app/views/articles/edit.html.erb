@@ -16,10 +16,6 @@
 		<%= f.text_area :address, size: "29x3" %>
 	</div>
 	<div class="field">
-		<%= f.label :city %>
-		<%= f.text_field :city, size: "33x1" %>
-	</div>
-	<div class="field">
 		<%= f.label :tag_list, "Tags" %>
 		<%= f.text_field :tag_list, value: @article.tag_list.to_s, size: "33x1", placeholder: "Separated by commas" %>
 	</div>
