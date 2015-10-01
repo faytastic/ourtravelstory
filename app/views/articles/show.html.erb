@@ -10,7 +10,7 @@
 
 		<% if @attachments.size>0 %>
 	<div id="gallery">
-			<p><%= image_tag('camera.png') %>More Photos</p>
+			<p><%= image_tag('camera.png') %></p>
 			<% @attachments.each do |attachment| %>
 			<div class="gallery-thumb"><%= link_to image_tag(attachment.picture_url(:gallery)), "#{attachment.picture_url}" %>
 				<% if user_signed_in? %>

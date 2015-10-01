@@ -14,7 +14,7 @@
 					<ul>
 						<li class="nav-box"><a id="city" href="#">Cities</a></li>
 						<li class="nav-box"><%= link_to "Photos", articles_path %></li>
-						<li class="nav-box"><a href="#">Plan</a></li>
+						<li class="nav-box"><%= link_to "Plans", plan_path %></li>
 						<% if user_signed_in? %>
 						<li class="nav-box"><%= link_to "Post", new_article_path %></li> 
 						<li class="nav-box"><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>

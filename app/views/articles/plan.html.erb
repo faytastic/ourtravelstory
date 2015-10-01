@@ -1,6 +1,6 @@
 <section id="articles-index">
 	<div id="index-heading">
-		<h1>Photos</h1>
+		<h1>To-Do List</h1>
 		<div id="underline"></div>
 		<div id="tags"><p>Select Category:
 			  <% tag_cloud Article.tag_counts, %w[s m l] do |tag, css_class| %>
@@ -9,10 +9,7 @@
 		</div>
 	</div>
 
-	
-
 	<div id="index-grid">
-		<%= will_paginate @articles %>
 		<% @articles.each do |article| %>
 		<div class="index-gridbox">
 			<div class="index-grid-picture">
@@ -26,10 +23,7 @@
 				<%= truncate(article.title, :length => 23) %>
 			</div>
 		</div>
-		<% end %>	
-		<%= will_paginate @articles, :page_links => false %>
+		<% end %>
 	</div>
-
-
 
 </section>

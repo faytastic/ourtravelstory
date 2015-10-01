@@ -3,9 +3,21 @@ class ArticlesController < ApplicationController
 
 	def index
 		if params[:tag]
-			@articles= Article.tagged_with(params[:tag])
+			@photos = Article.where(plans: 'past')
+			@articles= @photos.tagged_with(params[:tag]).paginate(page: params[:page], :per_page => 12)
 		else
-			@articles = Article.all
+			@photos = Article.where(plans: 'past')
+			@articles = @photos.paginate(page: params[:page], :per_page => 12)
+		end
+	end
+
+	def plan
+		if params[:tag]
+			@photos = Article.where(plans: 'future')
+			@articles = @photos.tagged_with(params[:tag]).paginate(page: params[:page], :per_page => 12)
+		else
+			@photos = Article.where(plans: 'future')
+			@articles = @photos.paginate(page: params[:page], :per_page => 12)
 		end
 	end
 
@@ -56,7 +68,7 @@ class ArticlesController < ApplicationController
 	private
 
 	def articles_params
-		params.require(:article).permit(:content, :title, :image, :address, :remote_image_url, :tag_list)
+		params.require(:article).permit(:content, :title, :image, :address, :plans, :remote_image_url, :tag_list)
 	end
 
 end
