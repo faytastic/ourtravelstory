@@ -97,9 +97,10 @@ header {
 }
 
 #logo {
-	height: 125px;
-	width: 115px;
-	border: 1px dashed #4C4C4C;
+	height: 100px;
+	width: 210px;
+	background: url('logo.png');
+	border: 0px dashed #4C4C4C;
 	text-align: center;
 	padding-top: 15px;
 	float: left;
@@ -107,6 +108,7 @@ header {
 }
 
 #logo-text {
+	display: none;
 	color: #4C4C4C;
 	text-transform: uppercase;
 	font: 18px/28px Arial, sans-serif;
@@ -148,7 +150,7 @@ header {
 #flash {
 	height: 50px;
 	width: 500px;
-	margin: 10px 0 0 155px;
+	margin: 10px 0 0 250px;
 }
 
 .notice {
