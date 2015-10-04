@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'devise'
-gem 'fog'
+gem 'fog',	'1.26.0'
 gem 'will_paginate'
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem 'mini_magick',				'3.8.0'
