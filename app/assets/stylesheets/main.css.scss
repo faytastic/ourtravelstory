@@ -662,3 +662,42 @@ label {
 *:first-child + html .pagination {
   overflow: hidden; 
 }
+
+/* cities page */
+
+#city-menu {
+	margin: 30px;
+	min-height: 550px;
+	background: url('vertical.jpg') no-repeat left center;
+}
+
+#menu-wrapper {
+	padding-top: 30px;
+	float: right;
+	width: 584px;
+}
+
+.country-list {
+	float: left;
+	width: 290px;
+	display: inline-block;
+	text-align: center;
+	font: 22px/32px 'Open Sans', Arial, sans-serif;
+	margin-bottom: 20px;
+}
+
+.country-name {
+	text-decoration: underline;
+	text-transform: uppercase;
+}
+
+.country-list ul a {
+	text-decoration: none;
+	color: #474747;
+	font: 18px/32px 'Open Sans', Arial, sans-serif;
+}
+
+.country-list ul li:hover {
+	background: #E2FFFF;
+	transition: 1s;
+}
